@@ -1,0 +1,5 @@
+namespace Tree {
+    class Node {
+        
+    }
+}
