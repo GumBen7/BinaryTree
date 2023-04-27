@@ -20,14 +20,16 @@ namespace Tree {
         public Node Search(int data) {
             return Search(this.Root, data);
         }
-        public Node Search(Node parent, int data) {            
+        public Node Search(Node parent, int data) {     
+            if (parent == null || data == parent.Data) {
+                return parent;
+            }      
             if (data < parent.Data) {
                 return Search(parent.Left, data);
             }
             else {
                 return Search(parent.Right, data);
             }
-            return parent;
         }
     }
 }
